@@ -75,9 +75,9 @@ Final processed & normalized dataset saved for clustering or modeling.
 ---
 
 ## 📁 Project Structure
--ProjectFile_MinMaxScaling.ipynb
--Mall_Customers.csv
--README.md
+- ProjectFile_MinMaxScaling.ipynb
+- Mall_Customers.csv
+- README.md
 
 
 ---
