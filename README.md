@@ -1,95 +1,93 @@
-# 🧠 Project Title: Customer Spending Score Prediction using Min-Max Scaling
-________________________________________
-🎯 Objective
+# 🧠 Customer Spending Score Prediction using Min-Max Scaling
 
-The goal of this project is to analyze customer behavior data and predict or cluster customers based on their spending patterns.
+This project analyzes customer behavior using the Mall Customer Segmentation dataset and applies **Min–Max Scaling** to normalize numerical features for clustering and predictive modeling. Scaling ensures that all features contribute equally to distance-based algorithms such as K-Means.
 
-The focus is to apply Min-Max Scaling to normalize features into a uniform range (0–1) so that every feature contributes equally to the model or clustering algorithm.
-________________________________________
-📊 Dataset
-Use the Mall Customer Segmentation Dataset (Kaggle link):
+---
 
-👉 https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
+## 📌 Project Overview
+The project focuses on:
+- Understanding customer demographics and spending habits
+- Cleaning and preprocessing raw data
+- Encoding categorical variables
+- Applying **Min-Max Scaling** to normalize numerical features
+- Preparing the dataset for ML tasks such as clustering or prediction
+- Visualizing distributions before and after scaling
 
-Sample Features:
+The goal is to create a clean, standardized dataset ready for machine learning or customer segmentation.
 
-Feature	Description
+---
 
-CustomerID	Unique customer ID
+## 📊 Dataset Information
+**Source:** Mall Customers Dataset (Kaggle)  
+**Features Included:**
+- `CustomerID`
+- `Gender`
+- `Age`
+- `Annual Income (k$)`
+- `Spending Score (1–100)`
 
-Gender	Male/Female
+---
 
-Age	Age of the customer
+## 🛠️ Tech Stack
+- **Python**
+- **NumPy**
+- **Pandas**
+- **Matplotlib / Seaborn**
+- **Scikit-learn**
+- **Jupyter Notebook**
 
-Annual Income (k$)	Annual income in thousand dollars
+---
 
-Spending Score (1–100)	Score assigned based on spending behavior
-________________________________________
-⚙️ Tasks to Perform
+## 🔧 Steps Performed
 
-1. Import and Inspect Data
+### **1. Data Import & Initial Analysis**
+- Loaded dataset using Pandas  
+- Checked shape, data types, missing values, and summary statistics  
 
-•	Load the dataset using pandas
+### **2. Data Cleaning**
+- Removed irrelevant column: `CustomerID`
+- Encoded `Gender` → numeric form (0/1)
+- Verified no missing values remain
 
-•	Display shape, data types, and missing values
+### **3. Feature Scaling**
+Applied **MinMaxScaler** to:
+- `Age`
+- `Annual Income (k$)`
+- `Spending Score`
 
-2. Data Cleaning
+This converts all values to the range **0–1**.
 
-•	Drop irrelevant columns like CustomerID
+### **4. Visualization**
+- Distribution before scaling  
+- Distribution after scaling  
+- Relationship plots for income vs. spending score  
 
-•	Handle missing values if any
+### **5. Exporting Scaled Data**
+Final processed & normalized dataset saved for clustering or modeling.
 
-•	Encode gender to numeric form (e.g., Male = 1, Female = 0)
+---
 
+## 🚀 Output
+- Cleaned dataset  
+- Scaled dataset (0–1 range)  
+- Ready for ML models like clustering or customer segmentation  
 
-3. Apply Min-Max Scaling
+---
 
-•	Scale numerical columns like:
-
-o	Age
-
-o	Annual Income (k$)
-
-o	Spending Score (1–100)
-
-•	Use MinMaxScaler from sklearn.preprocessing
-
-
-Formula:
-
-  Xscaled=X−XminXmax−XminX_{scaled} = \frac{X - X_{min}}{X_{max} - X_{min}}Xscaled=Xmax−XminX−Xmin 
+## 📁 Project Structure
+-ProjectFile_MinMaxScaling.ipynb
+-Mall_Customers.csv
+-README.md
 
 
-4. Model / Analysis
+---
 
-Choose any one:
-•	K-Means Clustering: Group customers based on similar spending and income
-•	Regression Task: Predict Spending Score based on age and income
-•	Visualization Task: Plot scaled vs. unscaled distributions
+## 📌 Author
+**Tanuj Singh**  
+Data Analyst | BI Developer | Creative Technologist  
+📧 *tanuj.singh.da@gmail.com*  
+🔗 [in/tanuj-singh-101703a1](https://www.linkedin.com/in/tanuj-singh-visuals/) / [GitHub](https://github.com/CoderTanujSingh)*
 
-5. Compare Results
-•	Compare results before and after scaling:
-o	For clustering: visualize how scaled data affects cluster boundaries
-o	For regression: check if training is faster or more stable
-________________________________________
+---
 
-📈 Expected Outcome
-
-•	All numerical features will lie between 0 and 1.
-
-•	Algorithms sensitive to magnitude differences (e.g., K-Means, KNN) will perform more accurately.
-
-•	You’ll visually notice more balanced and evenly spaced data points after scaling.
-
-________________________________________
-
-📄 Deliverables
-
-•	Python Notebook (.ipynb) showing all steps
-
-•	Scaled dataset (.csv file)
-
-•	Graphs showing before vs. after scaling
-
-•	Short summary: “Min-Max Scaling helped normalize income and spending features, improving clustering and visualization.”
-
+## ⭐ If you found this project helpful, consider giving it a star!
